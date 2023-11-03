@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/Content/app.css' />
+    <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/@fortawesome\fontawesome-free/css/all.min.css' />
+    
+  </head>
+  <body>
+    <nav>
+      <!-- Navigation links -->
+      <a href="/">Home</a>
+      <a href="/about">About Me</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact Me</a>
+    </nav>
+    <h1><%= heading %></h1>
+    <% if (title === 'Home Page') { %>
+      <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+    <article>
+        <!-- Welcome paragraph-->
+        <p>Hello and welcome! I'm Jacob Korin, a passionate software developer dedicated to creating impactful solutions and learning new technologies. This portfolio is a showcase of my skills, projects, and a little bit about who I am.</p>
+        <p>Feel free to explore and get to know me better. If you have any questions or would like to collaborate, don't hesitate to reach out.</p>
+    </article>
+    <footer>
+        <p>Linkedin: https://www.linkedin.com/in/jacob-korin-52a6b924b GitHub: https://github.com/JacobKorin/WebAndScriptAssignment2.git</p>
+    </footer>
+    <% } %>
+    <% if (title === 'About Me') { %>
+      
+    <article class="article-about">
+        <!-- Container for the About Me section -->
+        
+        <img src="/Asset/profile.jpg" alt="Profile Photo"> <!-- Profile photo -->
+        
+        <!-- Introduction paragraph -->
+        <p>Hello! My name is Jacob Korin and I am an 18 year old networking and IT security student. My Favourite things to do in my spare time are playing sports like volleyball and tennis or playing video games like clash of clans and minecraft.</p>
+        
+        <!-- Embedded video with controls and poster -->
+        <video controls poster="/Asset/poster.jpg" width="400">
+            <source src="/Asset/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </article>
+
+    <footer>
+        <p>Linkedin: https://www.linkedin.com/in/jacob-korin-52a6b924b GitHub: https://github.com/JacobKorin/WebAndScriptAssignment2.git</p> <!-- Footer content -->
+    </footer>
+    <% } %>
+    <% if (title === 'Projects') { %>
+      <div class="centered-div">
+    
+  
+      <article class="project-container">
+          <!-- Container for all projects -->
+  
+          <!-- Project 1 -->
+          <div class="project">
+              <h2>Project 1: Word Guessing Game</h2>
+              <img src="/Asset/Project1Screenshot.jpg" alt="Word Guessing Game"> <!-- Image for Project 1 -->
+              <p>This project involves creating a word guessing game where the user has to guess a word letter by letter.</p>
+          </div>
+  
+          <!-- Project 2 -->
+          <div class="project">
+              <h2>Project 2: Calculator App</h2>
+              <img src="/Asset/Project2Screenshot.jpg" alt="Calculator App"> <!-- Image for Project 2 -->
+              <p>This project is a simple calculator app that performs basic arithmetic operations like addition, subtraction, multiplication, and division.</p>
+          </div>
+  
+      </article>
+  
+      <footer>
+          <p>Linkedin: https://www.linkedin.com/in/jacob-korin-52a6b924b GitHub: https://github.com/JacobKorin/WebAndScriptAssignment2.git</p> <!-- Footer content -->
+      </footer>
+    <% } %>
+    <% if (title === 'Contact Us') { %>
+      <div class="centered-div">
+      <p>Questions, Comments and Queries Below!</p><br><br>
+    </div>
+    <div class="centered-div">
+      <article>
+        <form class="contact-form"> <!-- Form with POST method -->
+            <!-- Form groups for input fields -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="cell">Cell No:</label>
+                <input type="tel" id="cell" name="cell" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button> <!-- Submit button -->
+        </form>
+    </article>
+
+    <footer>
+        <p>Linkedin: https://www.linkedin.com/in/jacob-korin-52a6b924b GitHub: https://github.com/JacobKorin/WebAndScriptAssignment2.git</p> <!-- Footer content -->
+    </footer> 
+      <% } %>
+    
+  </body>
+</html>
